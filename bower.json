@@ -1,0 +1,20 @@
+{
+  "name": "rooms",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jbenkual/rooms",
+  "authors": [
+    "jbenkual <joe@benkual.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-ui-router": "~0.2.15"
+  }
+}
