@@ -42,12 +42,12 @@ app.controller('homeCtrl', ['$scope', function($scope){
   }
 
   $scope.delete = function(id) {
-    for(var i = 0; i < $scope.rooms[currentRoom].items.length; i++) {
-      if($scope.rooms[currentRoom].items[i].id === id) {
-        var x = $scope.rooms[currentRoom].items[i].cost;
-        $scope.rooms[currentRoom].cost -= x;
+    for(var i = 0; i < $scope.rooms[$scope.currentRoom].items.length; i++) {
+      if($scope.rooms[$scope.currentRoom].items[i].id === id) {
+        var x = $scope.rooms[$scope.currentRoom].items[i].cost;
+        $scope.rooms[$scope.currentRoom].cost -= x;
         $scope.totalCost -= x;
-        $scope.rooms[currentRoom].items.splice(i, 1);
+        $scope.rooms[$scope.currentRoom].items.splice(i, 1);
       }
     }
   }

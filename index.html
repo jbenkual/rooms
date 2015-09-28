@@ -9,7 +9,6 @@
 </head>
 <body ng-app="Rooms" ng-controller="homeCtrl">
   
-
   <div class="row">
     <div class="medium-4 columns medium-centered">
       <h2>Room Builder</h2>
@@ -47,7 +46,9 @@
           <a href="#" class="button tiny round" ng-click="addItem('chair', 2, 100)">Add</a>
         </div>
       </div>
-      <div class="row itemListing" ng-repeat="item in room[currentRoom].items track by $index">
+
+      <div class="row itemListing" ng-repeat="item in rooms[currentRoom].items track by $index">
+
         <div class="medium-4 columns">
           <span id="itemName">{{item.name}}</span>
         </div>
@@ -59,7 +60,7 @@
           <span id="costEa">$ {{item.cost}}</span>
         </div>
         <div class="medium-2 columns">
-          <i ng-click="delete()" class="fa fa-trash"></i>
+          <i ng-click="delete(item.id)" class="fa fa-trash"></i>
         </div>
       </div>
     </div>
