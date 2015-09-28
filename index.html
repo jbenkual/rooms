@@ -33,17 +33,17 @@
     <div class="medium-10 columns">
       <div class="row newItem">
         <div class="medium-4 columns">
-          <label>Name</label><span id="itemName">Chair</span>
+          <label>Name</label><input ng-model="itemName" placeholder="chair"></input>
         </div>
 
         <div class="medium-3 columns">
-          <label> Qty. </label><span id="qty">2</span>
+          <label> Qty. </label><input ng-model="qty" placeholder="0"></input>
         </div>
         <div class="medium-3 columns">
-          <label> Cost</label><span id="costEa">$100.00</span>
+          <label> Cost</label><input ng-model="costEa" placeholder="100"></input>
         </div>
         <div class="medium-2 columns">
-          <a href="#" class="button tiny round" ng-click="addItem('chair', 2, 100)">Add</a>
+          <a href="#" class="button tiny round" ng-click="addItem(itemName, qty, costEa)">Add</a>
         </div>
       </div>
 

@@ -28,6 +28,7 @@ app.controller('homeCtrl', ['$scope', function($scope){
   }
 
   $scope.addItem = function (name, qty, cost) {
+    cost = parseFloat(cost);
     console.log("add item!", qty)
     for(var i = 0; i  <qty; i ++) {
       $scope.rooms[$scope.currentRoom].items.push({
